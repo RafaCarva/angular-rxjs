@@ -1,0 +1,11 @@
+<div fxFill fxLayout="column" fxLayoutAlign="center start">
+ <mat-card>
+   <mat-card-title>Select the options bellow</mat-card-title>
+   <mat-card-content>
+     <mat-selection-list>
+       <!-- O async vai receber um array de observables e vai transformar em strings -->
+       <mat-list-option *ngFor="let o of options$ | async">{{ o }}</mat-list-option>
+     </mat-selection-list>
+   </mat-card-content>
+ </mat-card>
+</div>
