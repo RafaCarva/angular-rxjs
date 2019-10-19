@@ -10,6 +10,8 @@ import { BasicCreationComponent } from './basic-creation/basic-creation.componen
 import { OperatorsComponent } from './operators/operators.component';
 import { AsyncComponent } from './async/async.component';
 import { ErrorHandlingComponent } from './error-handling/error-handling.component';
+import { SwitchMergeComponent } from './switch-merge/switch-merge.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { ErrorHandlingComponent } from './error-handling/error-handling.componen
     BasicCreationComponent,
     OperatorsComponent,
     AsyncComponent,
-    ErrorHandlingComponent
+    ErrorHandlingComponent,
+    SwitchMergeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

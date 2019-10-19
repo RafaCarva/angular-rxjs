@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="start stretch">
+  <div>
+    <mat-form-field fxFlex="100" style="margin:20px;">
+      <mat-label>Search By:</mat-label>
+      <input #searchBy
+        matInput placeholder="Type something"
+        autocomplete="off"
+        [(ngModel)]="searchInput">
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-list>
+      <!-- como se trata de um observable, se usa | async
+        O async vai cuidar de dar o unscrile
+      -->
+      <mat-list-item *ngFor="let p of people$ | async">
+        <h3 matline>{{p.lastname}}, {{p.firstname }} </h3>
+        <p matline>{{p.email}}</p>
+        <p matline>City: {{p.city}}</p>
+        <p matline>Country: {{p.country}}</p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
